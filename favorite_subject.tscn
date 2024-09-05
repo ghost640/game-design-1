@@ -24,6 +24,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="btnShow" type="Button" parent="."]
+layout_mode = 0
 offset_left = 48.0
 offset_top = 484.0
 offset_right = 240.0
@@ -32,6 +33,7 @@ theme = ExtResource("2_mrsgo")
 text = "Show"
 
 [node name="btnClear" type="Button" parent="."]
+layout_mode = 0
 offset_left = 292.0
 offset_top = 479.0
 offset_right = 484.0
@@ -40,6 +42,7 @@ theme = ExtResource("2_mrsgo")
 text = "Clear"
 
 [node name="btnExit" type="Button" parent="."]
+layout_mode = 0
 offset_left = 572.0
 offset_top = 499.0
 offset_right = 764.0

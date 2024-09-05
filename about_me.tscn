@@ -33,6 +33,7 @@ theme = ExtResource("2_rmqp0")
 text = "show"
 
 [node name="btnClear" type="Button" parent="."]
+layout_mode = 0
 offset_left = 296.0
 offset_top = 494.0
 offset_right = 488.0
@@ -41,6 +42,7 @@ theme = ExtResource("2_rmqp0")
 text = "clear"
 
 [node name="btnExit" type="Button" parent="."]
+layout_mode = 0
 offset_left = 546.0
 offset_top = 488.0
 offset_right = 738.0

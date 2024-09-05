@@ -1,0 +1,107 @@
+[gd_scene load_steps=6 format=3 uid="uid://ut38pteayyak"]
+
+[ext_resource type="Script" path="res://prog_52a.gd" id="1_c7xnx"]
+[ext_resource type="Theme" uid="uid://b16mm2uf5waty" path="res://Big_Font.tres" id="2_4nvcs"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_x1gbw"]
+font_size = 38
+
+[sub_resource type="LabelSettings" id="LabelSettings_np0rr"]
+font_size = 38
+
+[sub_resource type="Theme" id="Theme_jtb7f"]
+default_font_size = 38
+
+[node name="Prog52a" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 26.0
+offset_top = 4.0
+offset_right = 26.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_c7xnx")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 317.0
+offset_bottom = 95.0
+text = "Length:
+"
+label_settings = SubResource("LabelSettings_x1gbw")
+horizontal_alignment = 2
+
+[node name="Label2" type="Label" parent="."]
+offset_left = -6.0
+offset_top = 77.0
+offset_right = 311.0
+offset_bottom = 172.0
+text = "Width:
+"
+label_settings = SubResource("LabelSettings_x1gbw")
+horizontal_alignment = 2
+
+[node name="lblArea" type="Label" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 176.0
+offset_right = 1097.0
+offset_bottom = 282.0
+text = "Area:"
+label_settings = SubResource("LabelSettings_np0rr")
+horizontal_alignment = 1
+
+[node name="lblPerim" type="Label" parent="."]
+offset_left = 17.0
+offset_top = 270.0
+offset_right = 1110.0
+offset_bottom = 376.0
+text = "Perimeter:"
+label_settings = SubResource("LabelSettings_np0rr")
+horizontal_alignment = 1
+
+[node name="txtLen" type="LineEdit" parent="."]
+offset_left = 334.0
+offset_top = 4.0
+offset_right = 679.0
+offset_bottom = 65.0
+theme = SubResource("Theme_jtb7f")
+
+[node name="txtWid" type="LineEdit" parent="."]
+offset_left = 332.0
+offset_top = 74.0
+offset_right = 677.0
+offset_bottom = 135.0
+theme = SubResource("Theme_jtb7f")
+
+[node name="btnCalc" type="Button" parent="."]
+layout_mode = 0
+offset_left = 220.0
+offset_top = 442.0
+offset_right = 442.0
+offset_bottom = 537.0
+theme = ExtResource("2_4nvcs")
+text = "Calculate"
+
+[node name="btnClear" type="Button" parent="."]
+offset_left = 490.0
+offset_top = 442.0
+offset_right = 666.0
+offset_bottom = 537.0
+theme = ExtResource("2_4nvcs")
+text = "Clear"
+
+[node name="btnExit" type="Button" parent="."]
+offset_left = 700.0
+offset_top = 442.0
+offset_right = 876.0
+offset_bottom = 537.0
+theme = ExtResource("2_4nvcs")
+text = "Exit"
+
+[connection signal="pressed" from="btnCalc" to="." method="_on_btn_calc_pressed"]
+[connection signal="pressed" from="btnClear" to="." method="_on_btn_clear_pressed"]
+[connection signal="pressed" from="btnExit" to="." method="_on_btn_exit_pressed"]
