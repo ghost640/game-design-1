@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://ffsw6iffd3qh"]
+[gd_scene load_steps=6 format=3 uid="uid://ffsw6iffd3qh"]
 
 [ext_resource type="Theme" uid="uid://b16mm2uf5waty" path="res://Big_Font.tres" id="1_cscpv"]
 [ext_resource type="Script" path="res://54b.gd" id="1_h1pal"]
@@ -7,6 +7,9 @@
 default_font_size = 38
 
 [sub_resource type="LabelSettings" id="LabelSettings_nn50c"]
+font_size = 38
+
+[sub_resource type="LabelSettings" id="LabelSettings_0ru55"]
 font_size = 38
 
 [node name="Prog54b" type="Control"]
@@ -92,6 +95,15 @@ offset_right = 861.0
 offset_bottom = 633.0
 theme = ExtResource("1_cscpv")
 text = "Exit"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 842.0
+offset_top = 111.0
+offset_right = 1132.0
+offset_bottom = 170.0
+text = "enter 4 integers"
+label_settings = SubResource("LabelSettings_0ru55")
 
 [connection signal="pressed" from="btnCalc" to="." method="_on_btn_calc_pressed"]
 [connection signal="pressed" from="btnClear" to="." method="_on_btn_clear_pressed"]
