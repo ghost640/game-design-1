@@ -35,6 +35,7 @@ label_settings = SubResource("LabelSettings_x1gbw")
 horizontal_alignment = 2
 
 [node name="Label2" type="Label" parent="."]
+layout_mode = 0
 offset_left = -6.0
 offset_top = 77.0
 offset_right = 311.0
@@ -55,6 +56,7 @@ label_settings = SubResource("LabelSettings_np0rr")
 horizontal_alignment = 1
 
 [node name="lblPerim" type="Label" parent="."]
+layout_mode = 0
 offset_left = 17.0
 offset_top = 270.0
 offset_right = 1110.0
@@ -64,6 +66,7 @@ label_settings = SubResource("LabelSettings_np0rr")
 horizontal_alignment = 1
 
 [node name="txtLen" type="LineEdit" parent="."]
+layout_mode = 0
 offset_left = 334.0
 offset_top = 4.0
 offset_right = 679.0
@@ -71,6 +74,7 @@ offset_bottom = 65.0
 theme = SubResource("Theme_jtb7f")
 
 [node name="txtWid" type="LineEdit" parent="."]
+layout_mode = 0
 offset_left = 332.0
 offset_top = 74.0
 offset_right = 677.0
@@ -87,6 +91,7 @@ theme = ExtResource("2_4nvcs")
 text = "Calculate"
 
 [node name="btnClear" type="Button" parent="."]
+layout_mode = 0
 offset_left = 490.0
 offset_top = 442.0
 offset_right = 666.0
@@ -95,6 +100,7 @@ theme = ExtResource("2_4nvcs")
 text = "Clear"
 
 [node name="btnExit" type="Button" parent="."]
+layout_mode = 0
 offset_left = 700.0
 offset_top = 442.0
 offset_right = 876.0

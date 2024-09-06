@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://ffsw6iffd3qh"]
+[gd_scene load_steps=5 format=3 uid="uid://ffsw6iffd3qh"]
 
 [ext_resource type="Theme" uid="uid://b16mm2uf5waty" path="res://Big_Font.tres" id="1_cscpv"]
+[ext_resource type="Script" path="res://54b.gd" id="1_h1pal"]
 
 [sub_resource type="Theme" id="Theme_fq3xa"]
 default_font_size = 38
@@ -15,6 +16,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_h1pal")
 
 [node name="txtNum1" type="TextEdit" parent="."]
 layout_mode = 0
@@ -25,6 +27,7 @@ offset_bottom = 93.0
 theme = SubResource("Theme_fq3xa")
 
 [node name="txtNum2" type="TextEdit" parent="."]
+layout_mode = 0
 offset_left = 256.0
 offset_top = 53.0
 offset_right = 437.0
@@ -32,6 +35,7 @@ offset_bottom = 97.0
 theme = SubResource("Theme_fq3xa")
 
 [node name="txtNum3" type="TextEdit" parent="."]
+layout_mode = 0
 offset_left = 479.0
 offset_top = 56.0
 offset_right = 660.0
@@ -39,6 +43,7 @@ offset_bottom = 100.0
 theme = SubResource("Theme_fq3xa")
 
 [node name="txtNum4" type="TextEdit" parent="."]
+layout_mode = 0
 offset_left = 705.0
 offset_top = 60.0
 offset_right = 886.0
@@ -46,6 +51,7 @@ offset_bottom = 104.0
 theme = SubResource("Theme_fq3xa")
 
 [node name="lblSum" type="Label" parent="."]
+layout_mode = 0
 offset_left = 305.0
 offset_top = 159.0
 offset_right = 693.0
@@ -53,6 +59,7 @@ offset_bottom = 216.0
 label_settings = SubResource("LabelSettings_nn50c")
 
 [node name="lblAverage" type="Label" parent="."]
+layout_mode = 0
 offset_left = 312.0
 offset_top = 256.0
 offset_right = 700.0
@@ -69,6 +76,7 @@ theme = ExtResource("1_cscpv")
 text = "Calculate"
 
 [node name="btnClear" type="Button" parent="."]
+layout_mode = 0
 offset_left = 411.0
 offset_top = 546.0
 offset_right = 588.0
@@ -77,9 +85,14 @@ theme = ExtResource("1_cscpv")
 text = "Clear"
 
 [node name="btnExit" type="Button" parent="."]
+layout_mode = 0
 offset_left = 684.0
 offset_top = 558.0
 offset_right = 861.0
 offset_bottom = 633.0
 theme = ExtResource("1_cscpv")
 text = "Exit"
+
+[connection signal="pressed" from="btnCalc" to="." method="_on_btn_calc_pressed"]
+[connection signal="pressed" from="btnClear" to="." method="_on_btn_clear_pressed"]
+[connection signal="pressed" from="btnExit" to="." method="_on_btn_exit_pressed"]
