@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=3 uid="uid://co3bc1psyg52i"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_nu00n"]
+font_size = 38
+
+[sub_resource type="LabelSettings" id="LabelSettings_gey66"]
+font_size = 38
+
+[node name="prog_93a" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextEdit" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = 311.0
+offset_top = 26.0
+offset_right = 451.0
+offset_bottom = 60.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 11.0
+offset_right = 308.0
+offset_bottom = 64.0
+text = "Kilowatts used: "
+label_settings = SubResource("LabelSettings_nu00n")
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 115.0
+offset_right = 310.0
+offset_bottom = 183.0
+label_settings = SubResource("LabelSettings_gey66")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 183.0
+offset_right = 109.0
+offset_bottom = 222.0
