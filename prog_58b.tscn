@@ -1,0 +1,80 @@
+[gd_scene load_steps=4 format=3 uid="uid://nadi8v2mxiyh"]
+
+[ext_resource type="Script" path="res://prog_58b.gd" id="1_rmoso"]
+[ext_resource type="Theme" uid="uid://b16mm2uf5waty" path="res://Big_Font.tres" id="2_oyhgo"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_p31ib"]
+font_size = 38
+
+[node name="prog_58b" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rmoso")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 30.0
+offset_right = 290.0
+offset_bottom = 101.0
+text = "enter a,b and c"
+label_settings = SubResource("LabelSettings_p31ib")
+
+[node name="lblRoot" type="Label" parent="."]
+offset_left = 39.0
+offset_top = 121.0
+offset_right = 293.0
+offset_bottom = 213.0
+label_settings = SubResource("LabelSettings_p31ib")
+
+[node name="txtA" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = 305.0
+offset_top = 17.0
+offset_right = 472.0
+offset_bottom = 91.0
+
+[node name="txtB" type="TextEdit" parent="."]
+offset_left = 483.0
+offset_top = 19.0
+offset_right = 650.0
+offset_bottom = 93.0
+
+[node name="txtC" type="TextEdit" parent="."]
+offset_left = 667.0
+offset_top = 19.0
+offset_right = 834.0
+offset_bottom = 93.0
+
+[node name="btnCalc" type="Button" parent="."]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 430.0
+offset_right = 226.0
+offset_bottom = 546.0
+theme = ExtResource("2_oyhgo")
+text = "Calc"
+
+[node name="btnClear" type="Button" parent="."]
+offset_left = 254.0
+offset_top = 432.0
+offset_right = 412.0
+offset_bottom = 548.0
+theme = ExtResource("2_oyhgo")
+text = "Clear"
+
+[node name="btnExit" type="Button" parent="."]
+offset_left = 439.0
+offset_top = 434.0
+offset_right = 597.0
+offset_bottom = 550.0
+theme = ExtResource("2_oyhgo")
+text = "Exit"
+
+[connection signal="pressed" from="btnCalc" to="." method="_on_btn_calc_pressed"]
+[connection signal="pressed" from="btnClear" to="." method="_on_btn_clear_pressed"]
+[connection signal="pressed" from="btnExit" to="." method="_on_btn_exit_pressed"]
