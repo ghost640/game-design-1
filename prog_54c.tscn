@@ -40,6 +40,7 @@ label_settings = SubResource("LabelSettings_pj4d7")
 horizontal_alignment = 2
 
 [node name="lblCircum" type="Label" parent="."]
+layout_mode = 0
 offset_left = 48.0
 offset_top = 234.0
 offset_right = 293.0
@@ -57,6 +58,7 @@ theme = ExtResource("1_ain2g")
 text = "Calc"
 
 [node name="btnClear" type="Button" parent="."]
+layout_mode = 0
 offset_left = 239.0
 offset_top = 515.0
 offset_right = 418.0
@@ -65,6 +67,7 @@ theme = ExtResource("1_ain2g")
 text = "Clear"
 
 [node name="btnExit" type="Button" parent="."]
+layout_mode = 0
 offset_left = 449.0
 offset_top = 514.0
 offset_right = 628.0
@@ -73,6 +76,7 @@ theme = ExtResource("1_ain2g")
 text = "Exit"
 
 [node name="Label3" type="Label" parent="."]
+layout_mode = 0
 offset_left = 37.0
 offset_top = 9.0
 offset_right = 282.0
