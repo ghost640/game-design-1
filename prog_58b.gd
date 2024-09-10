@@ -6,7 +6,7 @@ func _on_btn_calc_pressed() -> void:
 	var a = int($txtA.text)
 	var b = int($txtB.text)
 	var c = int($txtC.text)
-	var root = (-b + )
+	
 
 func _on_btn_clear_pressed() -> void:
 	$txtA.text = ""

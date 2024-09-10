@@ -52,6 +52,7 @@ theme = ExtResource("2_yhglb")
 text = "Calc"
 
 [node name="btnClear" type="Button" parent="."]
+layout_mode = 0
 offset_left = 164.0
 offset_top = 194.0
 offset_right = 267.0
@@ -60,6 +61,7 @@ theme = ExtResource("2_yhglb")
 text = "Clear"
 
 [node name="btnExit" type="Button" parent="."]
+layout_mode = 0
 offset_left = 305.0
 offset_top = 202.0
 offset_right = 408.0

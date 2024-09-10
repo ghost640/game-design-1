@@ -25,6 +25,7 @@ text = "enter a,b and c"
 label_settings = SubResource("LabelSettings_p31ib")
 
 [node name="lblRoot" type="Label" parent="."]
+layout_mode = 0
 offset_left = 39.0
 offset_top = 121.0
 offset_right = 293.0
@@ -39,12 +40,14 @@ offset_right = 472.0
 offset_bottom = 91.0
 
 [node name="txtB" type="TextEdit" parent="."]
+layout_mode = 0
 offset_left = 483.0
 offset_top = 19.0
 offset_right = 650.0
 offset_bottom = 93.0
 
 [node name="txtC" type="TextEdit" parent="."]
+layout_mode = 0
 offset_left = 667.0
 offset_top = 19.0
 offset_right = 834.0
@@ -60,6 +63,7 @@ theme = ExtResource("2_oyhgo")
 text = "Calc"
 
 [node name="btnClear" type="Button" parent="."]
+layout_mode = 0
 offset_left = 254.0
 offset_top = 432.0
 offset_right = 412.0
@@ -68,6 +72,7 @@ theme = ExtResource("2_oyhgo")
 text = "Clear"
 
 [node name="btnExit" type="Button" parent="."]
+layout_mode = 0
 offset_left = 439.0
 offset_top = 434.0
 offset_right = 597.0
