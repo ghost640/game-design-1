@@ -26,6 +26,7 @@ offset_right = 512.0
 offset_bottom = 119.0
 
 [node name="txtNum2" type="TextEdit" parent="."]
+layout_mode = 0
 offset_left = 586.0
 offset_top = 29.0
 offset_right = 716.0
@@ -42,6 +43,7 @@ label_settings = SubResource("LabelSettings_4yi4u")
 horizontal_alignment = 2
 
 [node name="lblAns" type="Label" parent="."]
+layout_mode = 0
 offset_left = 51.0
 offset_top = 121.0
 offset_right = 1129.0
@@ -58,6 +60,7 @@ theme = ExtResource("2_pg8w4")
 text = "Calc"
 
 [node name="btnClear" type="Button" parent="."]
+layout_mode = 0
 offset_left = 276.0
 offset_top = 535.0
 offset_right = 432.0
@@ -66,6 +69,7 @@ theme = ExtResource("2_pg8w4")
 text = "Clear"
 
 [node name="btnExit" type="Button" parent="."]
+layout_mode = 0
 offset_left = 475.0
 offset_top = 520.0
 offset_right = 631.0
