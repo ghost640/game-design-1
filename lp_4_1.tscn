@@ -28,6 +28,7 @@ theme = ExtResource("1_7rabf")
 text = "Calc"
 
 [node name="btnClear" type="Button" parent="."]
+layout_mode = 0
 offset_left = 250.0
 offset_top = 557.0
 offset_right = 382.0
@@ -36,6 +37,7 @@ theme = ExtResource("1_7rabf")
 text = "Clear"
 
 [node name="btnExit" type="Button" parent="."]
+layout_mode = 0
 offset_left = 477.0
 offset_top = 546.0
 offset_right = 609.0
@@ -59,6 +61,7 @@ offset_bottom = 410.0
 label_settings = SubResource("LabelSettings_mrd5s")
 
 [node name="lbl" type="Label" parent="."]
+layout_mode = 0
 offset_left = 353.0
 offset_top = 25.0
 offset_right = 599.0
