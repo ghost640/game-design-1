@@ -2,16 +2,12 @@ extends Control
 
 
 
-
-
 func _on_btn_calc_pressed() -> void:
-	for num in range(2, 36+1, 2):
-		$Label.text += str(num) + " "
+	$ItemList.add
 
 
 func _on_btn_clear_pressed() -> void:
-	$Label.text =""
-
+	$ItemList.clear()
 
 func _on_btn_exit_pressed() -> void:
 	get_tree().quit()

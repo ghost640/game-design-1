@@ -28,6 +28,7 @@ theme = ExtResource("2_qu1qf")
 text = "Calc"
 
 [node name="btnClear" type="Button" parent="."]
+layout_mode = 0
 offset_left = 286.0
 offset_top = 528.0
 offset_right = 484.0
@@ -36,6 +37,7 @@ theme = ExtResource("2_qu1qf")
 text = "Clear"
 
 [node name="btnExit" type="Button" parent="."]
+layout_mode = 0
 offset_left = 612.0
 offset_top = 520.0
 offset_right = 810.0
