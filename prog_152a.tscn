@@ -13,6 +13,7 @@ grow_vertical = 2
 script = ExtResource("1_ra6vr")
 
 [node name="btnCalc" type="Button" parent="."]
+layout_mode = 0
 offset_left = 38.0
 offset_top = 520.0
 offset_right = 236.0
@@ -21,6 +22,7 @@ theme = ExtResource("1_ohgvy")
 text = "Calc"
 
 [node name="btnClear" type="Button" parent="."]
+layout_mode = 0
 offset_left = 346.0
 offset_top = 512.0
 offset_right = 544.0
@@ -29,6 +31,7 @@ theme = ExtResource("1_ohgvy")
 text = "Clear"
 
 [node name="btnExit" type="Button" parent="."]
+layout_mode = 0
 offset_left = 653.0
 offset_top = 524.0
 offset_right = 851.0
@@ -37,6 +40,7 @@ theme = ExtResource("1_ohgvy")
 text = "Exit"
 
 [node name="ItemList" type="ItemList" parent="."]
+layout_mode = 0
 offset_right = 1144.0
 offset_bottom = 391.0
 theme = ExtResource("1_ohgvy")
