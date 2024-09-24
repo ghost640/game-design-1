@@ -21,6 +21,7 @@ grow_vertical = 2
 script = ExtResource("1_ni3vl")
 
 [node name="btnCalc" type="Button" parent="."]
+layout_mode = 0
 offset_left = 82.0
 offset_top = 548.0
 offset_right = 214.0
@@ -29,6 +30,7 @@ theme = ExtResource("2_ej0f8")
 text = "Calc"
 
 [node name="btnClear" type="Button" parent="."]
+layout_mode = 0
 offset_left = 250.0
 offset_top = 557.0
 offset_right = 382.0
@@ -37,6 +39,7 @@ theme = ExtResource("2_ej0f8")
 text = "Clear"
 
 [node name="btnExit" type="Button" parent="."]
+layout_mode = 0
 offset_left = 477.0
 offset_top = 546.0
 offset_right = 609.0
@@ -45,24 +48,28 @@ theme = ExtResource("2_ej0f8")
 text = "Exit"
 
 [node name="txtWeight" type="TextEdit" parent="."]
+layout_mode = 0
 offset_left = 104.0
 offset_top = 36.0
 offset_right = 327.0
 offset_bottom = 93.0
 
 [node name="txtHeight" type="TextEdit" parent="."]
+layout_mode = 0
 offset_left = 807.0
 offset_top = 35.0
 offset_right = 1030.0
 offset_bottom = 92.0
 
 [node name="txtWidth" type="TextEdit" parent="."]
+layout_mode = 0
 offset_left = 574.0
 offset_top = 36.0
 offset_right = 797.0
 offset_bottom = 93.0
 
 [node name="txtLength" type="TextEdit" parent="."]
+layout_mode = 0
 offset_left = 337.0
 offset_top = 33.0
 offset_right = 560.0
@@ -79,6 +86,7 @@ text = "enter weight in kilograms,
 label_settings = SubResource("LabelSettings_idms5")
 
 [node name="lblOut" type="Label" parent="."]
+layout_mode = 0
 offset_left = 71.0
 offset_top = 262.0
 offset_right = 973.0
