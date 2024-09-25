@@ -3,10 +3,10 @@ extends Control
 
 
 func _on_btn_calc_pressed() -> void:
-	$ItemList.add_item = "x     y"
-	for x in range(-12, 16 + 1):
-		var y = x**6 - 3*x**5 - 93*x**4 + 87*x**3 + 1596*x**2 - 1380*x - 2800
-		var line = "%d     %d" % [x, y]
+	$ItemList.add_item("x          y")
+	for numX in range(-12, 16 + 1):
+		var numY = numX**6 - 3*(numX**5) - 93*(numX**4) + 87*(numX**3) + 1596*(numX**2) - 1380*numX - 2800
+		var line = "%d    %d" % [numX, numY]
 		$ItemList.add_item(line)
 
 

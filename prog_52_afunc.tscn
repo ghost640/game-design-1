@@ -1,0 +1,90 @@
+[gd_scene load_steps=6 format=3 uid="uid://i5sy035qh2oi"]
+
+[ext_resource type="Theme" uid="uid://b16mm2uf5waty" path="res://Big_Font.tres" id="1_64rdh"]
+[ext_resource type="Script" path="res://prog_52_afunc.gd" id="1_xq126"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_bwaek"]
+font_size = 38
+
+[sub_resource type="LabelSettings" id="LabelSettings_aceh8"]
+font_size = 38
+
+[sub_resource type="Theme" id="Theme_k4gnf"]
+default_font_size = 38
+
+[node name="prog52afunc" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xq126")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 317.0
+offset_bottom = 95.0
+text = "Length:
+"
+label_settings = SubResource("LabelSettings_bwaek")
+horizontal_alignment = 2
+
+[node name="Label2" type="Label" parent="."]
+offset_left = -6.0
+offset_top = 77.0
+offset_right = 311.0
+offset_bottom = 172.0
+text = "Width:
+"
+label_settings = SubResource("LabelSettings_bwaek")
+horizontal_alignment = 2
+
+[node name="lblOut" type="Label" parent="."]
+offset_left = 4.0
+offset_top = 176.0
+offset_right = 1097.0
+offset_bottom = 282.0
+label_settings = SubResource("LabelSettings_aceh8")
+horizontal_alignment = 1
+
+[node name="txtLen" type="LineEdit" parent="."]
+offset_left = 334.0
+offset_top = 4.0
+offset_right = 679.0
+offset_bottom = 65.0
+theme = SubResource("Theme_k4gnf")
+
+[node name="txtWid" type="LineEdit" parent="."]
+offset_left = 332.0
+offset_top = 74.0
+offset_right = 677.0
+offset_bottom = 135.0
+theme = SubResource("Theme_k4gnf")
+
+[node name="btnCalc" type="Button" parent="."]
+offset_left = 220.0
+offset_top = 442.0
+offset_right = 442.0
+offset_bottom = 537.0
+theme = ExtResource("1_64rdh")
+text = "Calculate"
+
+[node name="btnClear" type="Button" parent="."]
+offset_left = 490.0
+offset_top = 442.0
+offset_right = 666.0
+offset_bottom = 537.0
+theme = ExtResource("1_64rdh")
+text = "Clear"
+
+[node name="btnExit" type="Button" parent="."]
+offset_left = 700.0
+offset_top = 442.0
+offset_right = 876.0
+offset_bottom = 537.0
+theme = ExtResource("1_64rdh")
+text = "Exit"
+
+[connection signal="pressed" from="btnCalc" to="." method="_on_btn_calc_pressed"]
+[connection signal="pressed" from="btnClear" to="." method="_on_btn_clear_pressed"]
+[connection signal="pressed" from="btnExit" to="." method="_on_btn_exit_pressed"]
