@@ -23,6 +23,7 @@ text = "modify points(add/sub):"
 label_settings = SubResource("LabelSettings_fqy64")
 
 [node name="lblOut" type="Label" parent="."]
+layout_mode = 0
 offset_left = 27.0
 offset_top = 169.0
 offset_right = 266.0
@@ -47,6 +48,7 @@ theme = ExtResource("2_cgo2e")
 text = "update"
 
 [node name="btnReset" type="Button" parent="."]
+layout_mode = 0
 offset_left = 684.0
 offset_top = 462.0
 offset_right = 873.0
