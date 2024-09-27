@@ -20,37 +20,42 @@ func _on_btn_add_pressed() -> void:
 	var n2 = int($TextEdit2.text)
 	sum = myAdd(n1, n2)
 	$lblOut.text = str(sum)
+	$lblOp.text = "+"
 func _on_btn_sub_pressed() -> void:
 	$lblOut.text = ""
 	var n1 = int($TextEdit.text)
 	var n2 = int($TextEdit2.text)
 	sum = mySub(n1,n2)
 	$lblOut.text = str(sum)
+	$lblOp.text = "-"
 func _on_btn_mult_pressed() -> void:
 	$lblOut.text = ""
 	var n1 = int($TextEdit.text)
 	var n2 = int($TextEdit2.text)
 	sum = myMul(n1, n2)
 	$lblOut.text = str(sum)
+	$lblOp.text = "*"
 func _on_btn_mod_pressed() -> void:
 	$lblOut.text = ""
 	var n1 = int($TextEdit.text)
 	var n2 = int($TextEdit2.text)
 	sum = myMod(n1, n2)
 	$lblOut.text = str(sum)
+	$lblOp.text = "%"
 func _on_btn_div_pressed() -> void:
 	$lblOut.text = ""
 	var n1 = int($TextEdit.text)
 	var n2 = int($TextEdit2.text)
 	sum = myDiv(n1, n2)
 	$lblOut.text = str(sum)
+	$lblOp.text = "/"
 func _on_btn_pow_pressed() -> void:
 	$lblOut.text = ""
 	var n1 = int($TextEdit.text)
 	var n2 = int($TextEdit2.text)
 	sum = myPow(n1, n2)
 	$lblOut.text = str(sum)
-
+	$lblOp.text = "**"
 func _on_btn_exit_pressed() -> void:
 	get_tree().quit()
 
