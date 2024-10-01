@@ -27,6 +27,7 @@ offset_right = 302.0
 offset_bottom = 283.0
 
 [node name="TextEdit2" type="TextEdit" parent="."]
+layout_mode = 0
 offset_left = 168.0
 offset_top = 412.0
 offset_right = 293.0
@@ -42,6 +43,7 @@ text = "Num1:"
 label_settings = SubResource("LabelSettings_cnyoi")
 
 [node name="Label2" type="Label" parent="."]
+layout_mode = 0
 offset_left = 25.0
 offset_top = 390.0
 offset_right = 147.0
@@ -50,6 +52,7 @@ text = "Num2:"
 label_settings = SubResource("LabelSettings_cnyoi")
 
 [node name="lblOut" type="Label" parent="."]
+layout_mode = 0
 offset_left = 180.0
 offset_top = 499.0
 offset_right = 628.0
@@ -57,6 +60,7 @@ offset_bottom = 622.0
 label_settings = SubResource("LabelSettings_cnyoi")
 
 [node name="Label4" type="Label" parent="."]
+layout_mode = 0
 offset_left = 27.0
 offset_top = 539.0
 offset_right = 162.0
@@ -72,6 +76,7 @@ theme = ExtResource("2_feilx")
 text = "+"
 
 [node name="btnExit" type="Button" parent="."]
+layout_mode = 0
 offset_left = 778.0
 offset_top = 351.0
 offset_right = 902.0
@@ -80,6 +85,7 @@ theme = ExtResource("2_feilx")
 text = "exit"
 
 [node name="btnClear" type="Button" parent="."]
+layout_mode = 0
 offset_left = 597.0
 offset_top = 360.0
 offset_right = 721.0
@@ -88,6 +94,7 @@ theme = ExtResource("2_feilx")
 text = "clear"
 
 [node name="btnPow" type="Button" parent="."]
+layout_mode = 0
 offset_left = 19.0
 offset_top = 112.0
 offset_right = 143.0
@@ -96,6 +103,7 @@ theme = ExtResource("2_feilx")
 text = "**"
 
 [node name="btnDiv" type="Button" parent="."]
+layout_mode = 0
 offset_left = 171.0
 offset_top = 114.0
 offset_right = 295.0
@@ -104,6 +112,7 @@ theme = ExtResource("2_feilx")
 text = "/"
 
 [node name="btnMod" type="Button" parent="."]
+layout_mode = 0
 offset_left = 330.0
 offset_top = 119.0
 offset_right = 454.0
@@ -112,6 +121,7 @@ theme = ExtResource("2_feilx")
 text = "mod"
 
 [node name="btnMult" type="Button" parent="."]
+layout_mode = 0
 offset_left = 310.0
 offset_top = 10.0
 offset_right = 434.0
@@ -120,6 +130,7 @@ theme = ExtResource("2_feilx")
 text = "*"
 
 [node name="btnSub" type="Button" parent="."]
+layout_mode = 0
 offset_left = 154.0
 offset_top = 2.0
 offset_right = 278.0
@@ -128,6 +139,7 @@ theme = ExtResource("2_feilx")
 text = "-"
 
 [node name="Label3" type="Label" parent="."]
+layout_mode = 0
 offset_left = 26.0
 offset_top = 311.0
 offset_right = 148.0
@@ -136,6 +148,7 @@ text = "Operation:"
 label_settings = SubResource("LabelSettings_cnyoi")
 
 [node name="lblOp" type="Label" parent="."]
+layout_mode = 0
 offset_left = 250.0
 offset_top = 311.0
 offset_right = 372.0
