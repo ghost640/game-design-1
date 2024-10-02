@@ -1,10 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://o4pju5eufpxy"]
+[gd_scene load_steps=7 format=3 uid="uid://o4pju5eufpxy"]
 
 [ext_resource type="Script" path="res://plt_world_1.gd" id="1_gd7wy"]
 [ext_resource type="PackedScene" uid="uid://b5i6brxiti8xv" path="res://plt_player.tscn" id="2_hoatc"]
+[ext_resource type="PackedScene" uid="uid://1hmuma0uiopj" path="res://interact.tscn" id="3_g1go5"]
+[ext_resource type="PackedScene" uid="uid://b0l4bn3ywgrxf" path="res://draggable.tscn" id="4_yfo70"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tgy6v"]
-size = Vector2(262.5, 20.125)
+size = Vector2(135.5, 20.125)
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_nwaju"]
 
@@ -19,7 +21,7 @@ position = Vector2(51, 49)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="world"]
 position = Vector2(35, -313)
-polygon = PackedVector2Array(0, 27, 27, 302, 32, 468, 53, 583, 217, 499, 366, 575, 414, 452, 582, 446, 702, 551, 862, 532, 873, 454, 1012, 393, 1194, 525, 1399, 393, 1491, 548, 1689, 446, 1930, 521, 1946, 418, 2292, 452, 2266, 573, 2700, 141, 2870, 40, 2339, 1153, -45, 1091)
+polygon = PackedVector2Array(0, 27, 27, 302, 32, 468, 53, 583, 217, 499, 366, 575, 414, 452, 582, 446, 702, 551, 862, 532, 873, 454, 1012, 393, 1194, 525, 1403, 415, 1491, 548, 1689, 446, 1930, 521, 1946, 418, 2292, 452, 2266, 573, 2770, 411, 3666, 155, 4083, 422, 4755, 400, 5108, 721, 5471, 411, 5956, 758, 6277, -721, 6844, 1036, 6897, 1169, 2339, 1153, -45, 1091)
 
 [node name="Polygon2D" type="Polygon2D" parent="world/CollisionPolygon2D"]
 
@@ -27,8 +29,14 @@ polygon = PackedVector2Array(0, 27, 27, 302, 32, 468, 53, 583, 217, 499, 366, 57
 position = Vector2(13, 10)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="startplatform"]
-position = Vector2(208.75, 105.938)
+position = Vector2(170, 118)
 shape = SubResource("RectangleShape2D_tgy6v")
 
 [node name="Sprite2D" type="Sprite2D" parent="startplatform/CollisionShape2D"]
 texture = SubResource("PlaceholderTexture2D_nwaju")
+
+[node name="interact" parent="." instance=ExtResource("3_g1go5")]
+position = Vector2(826, 139)
+
+[node name="draggable" parent="." instance=ExtResource("4_yfo70")]
+position = Vector2(401, 65)
