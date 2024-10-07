@@ -12,6 +12,7 @@ size = Vector2(135.5, 20.125)
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_nwaju"]
 
 [node name="plt_world1" type="Node2D"]
+position = Vector2(1, 0)
 script = ExtResource("1_gd7wy")
 
 [node name="plt_player" parent="." instance=ExtResource("2_hoatc")]
@@ -43,10 +44,10 @@ position = Vector2(826, 139)
 position = Vector2(401, 65)
 
 [node name="plt_enemy2" parent="." instance=ExtResource("5_ciqts")]
-position = Vector2(361, 246)
+position = Vector2(361, 255)
 
 [node name="plt_enemy3" parent="." instance=ExtResource("5_ciqts")]
-position = Vector2(1670, 224)
+position = Vector2(1669, 229)
 
 [node name="plt_enemy" parent="." instance=ExtResource("5_ciqts")]
-position = Vector2(824, 269)
+position = Vector2(856, 270)
