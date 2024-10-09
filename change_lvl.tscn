@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://yhgguw1vu7ub"]
+
+[ext_resource type="Script" path="res://change_lvl.gd" id="1_7h0ad"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_istf7"]
+size = Vector2(48, 28)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_n86h6"]
+
+[node name="change_lvl" type="Area2D"]
+script = ExtResource("1_7h0ad")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_istf7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.0235294, 0.843137, 1, 0.929412)
+position = Vector2(-9.53674e-07, 0.499999)
+scale = Vector2(48, 29)
+texture = SubResource("PlaceholderTexture2D_n86h6")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
