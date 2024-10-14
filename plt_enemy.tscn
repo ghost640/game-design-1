@@ -58,7 +58,8 @@ texture = ExtResource("2_bvcw2")
 [node name="Timer" type="Timer" parent="."]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -7)
+position = Vector2(6, -1)
+scale = Vector2(1.375, 1.375)
 sprite_frames = SubResource("SpriteFrames_nu0t4")
 animation = &"walking"
 frame_progress = 0.0268317
