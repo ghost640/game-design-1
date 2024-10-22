@@ -1,0 +1,129 @@
+[gd_scene load_steps=7 format=3 uid="uid://bu63ui8hsk01e"]
+
+[ext_resource type="Script" path="res://phys_demo.gd" id="1_70wxt"]
+[ext_resource type="PackedScene" uid="uid://vnnmfmw1lyuf" path="res://phys_ball.tscn" id="1_ygfll"]
+[ext_resource type="Theme" uid="uid://b16mm2uf5waty" path="res://Big_Font.tres" id="3_x8kia"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a7uqn"]
+size = Vector2(1847, 86)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_6pbrj"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_cg5l1"]
+font_size = 40
+
+[node name="phys_demo" type="Node2D"]
+script = ExtResource("1_70wxt")
+
+[node name="phys_ball" parent="." instance=ExtResource("1_ygfll")]
+position = Vector2(997, 259)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(649.5, 611)
+shape = SubResource("RectangleShape2D_a7uqn")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(649.375, 615)
+scale = Vector2(1844.75, 93.5)
+texture = SubResource("PlaceholderTexture2D_6pbrj")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 634.0
+offset_bottom = 564.0
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_right = 118.0
+offset_bottom = 61.0
+text = "gravity:"
+label_settings = SubResource("LabelSettings_cg5l1")
+
+[node name="Label4" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 476.0
+offset_right = 178.0
+offset_bottom = 537.0
+text = "mass:"
+label_settings = SubResource("LabelSettings_cg5l1")
+
+[node name="Label2" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 165.0
+offset_right = 143.0
+offset_bottom = 226.0
+text = "Insertia:"
+label_settings = SubResource("LabelSettings_cg5l1")
+
+[node name="Label3" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 260.0
+offset_right = 189.0
+offset_bottom = 321.0
+text = "velocity (x, y):"
+label_settings = SubResource("LabelSettings_cg5l1")
+
+[node name="GravSlider" type="HSlider" parent="Panel"]
+layout_mode = 0
+offset_left = 137.0
+offset_top = 6.0
+offset_right = 580.0
+offset_bottom = 54.0
+
+[node name="btnForce" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 57.0
+offset_right = 611.0
+offset_bottom = 151.0
+theme = ExtResource("3_x8kia")
+text = "apply force"
+
+[node name="btnAdjust" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 359.0
+offset_right = 601.0
+offset_bottom = 453.0
+theme = ExtResource("3_x8kia")
+text = "apply adjustments"
+
+[node name="txtInsertia" type="LineEdit" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 184.0
+offset_top = 171.0
+offset_right = 559.0
+offset_bottom = 227.0
+
+[node name="txtMass" type="LineEdit" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 168.0
+offset_top = 482.0
+offset_right = 543.0
+offset_bottom = 538.0
+
+[node name="txtVelX" type="LineEdit" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 305.0
+offset_top = 263.0
+offset_right = 388.0
+offset_bottom = 319.0
+
+[node name="txtVelY" type="LineEdit" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 425.0
+offset_top = 267.0
+offset_right = 530.0
+offset_bottom = 332.0
+
+[connection signal="value_changed" from="Panel/GravSlider" to="." method="_on_grav_slider_value_changed"]
+[connection signal="pressed" from="Panel/btnForce" to="." method="_on_btn_force_pressed"]
+[connection signal="pressed" from="Panel/btnAdjust" to="." method="_on_btn_adjust_pressed"]
