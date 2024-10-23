@@ -33,10 +33,10 @@ func _on_btn_adjust_pressed() -> void:
 	var v_x = float($Panel/txtVelX.text)
 	var v_y = float($Panel/txtVelY.text)
 	var velocity = Vector2(v_x, v_y)
-	var mass = float($Panel/txtMass.text)
-	var Momentum = velocity * mass
+	var time = float($Panel/txtTime.text)
+	var Acceleration = velocity / time
 	for child in get_children():
 		if child is RigidBody2D:
 			child.inertia = insertia
 			child.linear_velocity = velocity
-			child.momentum = Momentum
+			child.add_constant_force(Acceleration) 
