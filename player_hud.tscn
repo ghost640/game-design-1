@@ -61,7 +61,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="player_hud" type="CanvasLayer"]
+[node name="player_hud" type="CanvasLayer" groups=["HUB"]]
 script = ExtResource("1_867ve")
 
 [node name="PlayerHealth" type="Control" parent="."]
