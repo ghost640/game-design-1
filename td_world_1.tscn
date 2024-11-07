@@ -1,7 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://7vnl0771aojo"]
+[gd_scene load_steps=8 format=4 uid="uid://7vnl0771aojo"]
 
 [ext_resource type="Texture2D" uid="uid://bwmhiwkk502fh" path="res://assets/sprites/zelda/Overworld.png" id="1_p2lps"]
 [ext_resource type="PackedScene" uid="uid://sa8bx52momhf" path="res://td_player.tscn" id="2_aigxy"]
+[ext_resource type="PackedScene" uid="uid://bm3hmjesgw2x7" path="res://entities/items/mini_heart.tscn" id="3_jml0e"]
+[ext_resource type="PackedScene" uid="uid://cae3csmf6s301" path="res://entities/items/mini_coin.tscn" id="4_wuyua"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_plu4c"]
 
@@ -1082,3 +1084,33 @@ tile_set = SubResource("TileSet_vs5ew")
 
 [node name="td_player" parent="." instance=ExtResource("2_aigxy")]
 position = Vector2(4, 28)
+
+[node name="mini_heart" parent="." instance=ExtResource("3_jml0e")]
+position = Vector2(-49, 136)
+
+[node name="mini_heart2" parent="." instance=ExtResource("3_jml0e")]
+position = Vector2(-67, 96)
+
+[node name="mini_heart3" parent="." instance=ExtResource("3_jml0e")]
+position = Vector2(27, 133)
+
+[node name="mini_heart4" parent="." instance=ExtResource("3_jml0e")]
+position = Vector2(-76, 26)
+
+[node name="mini_coin" parent="." instance=ExtResource("4_wuyua")]
+position = Vector2(-11, 68)
+
+[node name="mini_coin2" parent="." instance=ExtResource("4_wuyua")]
+position = Vector2(97, 135)
+
+[node name="mini_coin3" parent="." instance=ExtResource("4_wuyua")]
+position = Vector2(-43, -30)
+
+[node name="mini_coin4" parent="." instance=ExtResource("4_wuyua")]
+position = Vector2(24, -18)
+
+[node name="mini_coin5" parent="." instance=ExtResource("4_wuyua")]
+position = Vector2(63, 11)
+
+[node name="mini_coin6" parent="." instance=ExtResource("4_wuyua")]
+position = Vector2(150, 34)

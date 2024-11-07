@@ -1,0 +1,59 @@
+[gd_scene load_steps=6 format=3 uid="uid://dy1h1eyg3k3cs"]
+
+[ext_resource type="Script" path="res://node_2d.gd" id="1_xu1vs"]
+[ext_resource type="Texture2D" uid="uid://byj0pfrpqih5v" path="res://assets/sprites/zelda/objects.png" id="2_irpqc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ibm2"]
+atlas = ExtResource("2_irpqc")
+region = Rect2(0, 64, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ifkft"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ibm2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_y2ibm"]
+font_size = 30
+
+[node name="p_hud" type="CanvasLayer" groups=["HUB"]]
+script = ExtResource("1_xu1vs")
+
+[node name="PlayerHealth" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Hearts" type="Sprite2D" parent="PlayerHealth"]
+position = Vector2(28.4545, 33.7813)
+scale = Vector2(2.19318, 1.92188)
+texture = ExtResource("2_irpqc")
+hframes = 33
+vframes = 16
+frame = 8
+
+[node name="Money" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 38.0
+offset_bottom = 41.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Money"]
+position = Vector2(21, 125.5)
+scale = Vector2(2.375, 2.3125)
+sprite_frames = SubResource("SpriteFrames_ifkft")
+
+[node name="Coins" type="Label" parent="Money"]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 101.0
+offset_right = 93.0
+offset_bottom = 143.0
+text = "000"
+label_settings = SubResource("LabelSettings_y2ibm")
