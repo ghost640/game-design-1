@@ -151,33 +151,33 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wpkjl"]
-size = Vector2(14, 24)
+size = Vector2(14, 25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j0bea"]
-size = Vector2(23, 27)
+size = Vector2(23, 28)
 
 [node name="td_enemy" type="CharacterBody2D" groups=["Enemy"]]
 script = ExtResource("1_3g1xb")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_g2csy")
-frame_progress = 0.509287
+frame_progress = 0.860653
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 1)
+position = Vector2(0, 1.5)
 shape = SubResource("RectangleShape2D_wpkjl")
 
 [node name="AttackBox" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackBox"]
-position = Vector2(-0.5, -0.5)
+position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_j0bea")
 debug_color = Color(0.703859, 0.489892, 0, 0.42)
 
 [node name="RayCast2DR" type="RayCast2D" parent="."]
 target_position = Vector2(-48, -24)
 
-[node name="RayCast2DM" type="RayCast2D" parent="RayCast2DR"]
+[node name="RayCast2DM" type="RayCast2D" parent="."]
 target_position = Vector2(-50, 0)
 
 [node name="RayCast2DL" type="RayCast2D" parent="."]
