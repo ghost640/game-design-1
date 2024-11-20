@@ -166,4 +166,10 @@ position = Vector2(-0.5, 0)
 [node name="Sprite2D" parent="change_lvl" index="1"]
 visible = false
 
+[node name="td_enemy3" parent="." instance=ExtResource("3_rjrnj")]
+position = Vector2(155, -50)
+
+[node name="td_enemy4" parent="." instance=ExtResource("3_rjrnj")]
+position = Vector2(-32, 33)
+
 [editable path="change_lvl"]
