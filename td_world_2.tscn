@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=4 uid="uid://n81juyxpe8wy"]
+[gd_scene load_steps=8 format=4 uid="uid://n81juyxpe8wy"]
 
 [ext_resource type="Texture2D" uid="uid://bguxnu53oatwq" path="res://assets/sprites/zelda/cave.png" id="1_b2fv3"]
 [ext_resource type="PackedScene" uid="uid://sa8bx52momhf" path="res://td_player.tscn" id="2_fdxp1"]
 [ext_resource type="PackedScene" uid="uid://dl8a43sfm7r3w" path="res://td_enemy.tscn" id="3_rjrnj"]
 [ext_resource type="PackedScene" uid="uid://yhgguw1vu7ub" path="res://change_lvl.tscn" id="4_5x1iu"]
+[ext_resource type="PackedScene" uid="uid://8sefd3h6un5t" path="res://entities/items/heart_container.tscn" id="5_jgs3l"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1xr38"]
 texture = ExtResource("1_b2fv3")
@@ -171,5 +172,8 @@ position = Vector2(155, -50)
 
 [node name="td_enemy4" parent="." instance=ExtResource("3_rjrnj")]
 position = Vector2(-32, 33)
+
+[node name="heart_container" parent="." instance=ExtResource("5_jgs3l")]
+position = Vector2(-17, -34)
 
 [editable path="change_lvl"]

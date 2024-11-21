@@ -78,6 +78,11 @@ func charged_attack():
 func _ready() -> void:
 	p_hud.show()
 
+func pickup_heartcontainer(value):
+	data.max_health += value
+	data.health += value
+	data.health = clamp(data.health, 0, data.max_health)
+	p_hud.draw_hearts()
 func pickup_health(value):
 	data.health += value
 	data.health = clamp(data.health, 0, data.max_health)

@@ -1,0 +1,59 @@
+[gd_scene load_steps=9 format=3 uid="uid://8sefd3h6un5t"]
+
+[ext_resource type="Script" path="res://heart_container.gd" id="1_ijlpq"]
+[ext_resource type="Texture2D" uid="uid://byj0pfrpqih5v" path="res://assets/sprites/zelda/objects.png" id="2_s5bsh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n8kaq"]
+atlas = ExtResource("2_s5bsh")
+region = Rect2(64, 126, 16, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hv3gg"]
+atlas = ExtResource("2_s5bsh")
+region = Rect2(80, 126, 16, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6gb3f"]
+atlas = ExtResource("2_s5bsh")
+region = Rect2(96, 126, 16, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k7jes"]
+atlas = ExtResource("2_s5bsh")
+region = Rect2(112, 126, 16, 21)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bcdb0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n8kaq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hv3gg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6gb3f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k7jes")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ank3r"]
+radius = 9.0
+height = 18.0
+
+[node name="heart_container" type="Node2D"]
+script = ExtResource("1_ijlpq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(2.5, -0.25)
+scale = Vector2(1.3125, 0.976191)
+sprite_frames = SubResource("SpriteFrames_bcdb0")
+frame_progress = 0.943171
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(3, 0)
+shape = SubResource("CapsuleShape2D_ank3r")

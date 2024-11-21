@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://7vnl0771aojo"]
+[gd_scene load_steps=12 format=4 uid="uid://7vnl0771aojo"]
 
 [ext_resource type="Texture2D" uid="uid://bwmhiwkk502fh" path="res://assets/sprites/zelda/Overworld.png" id="1_p2lps"]
 [ext_resource type="PackedScene" uid="uid://sa8bx52momhf" path="res://td_player.tscn" id="2_aigxy"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dl8a43sfm7r3w" path="res://td_enemy.tscn" id="5_bldpi"]
 [ext_resource type="AudioStream" uid="uid://bppv0uhbii178" path="res://assets/sounds/overworld.mp3" id="6_ogy2e"]
 [ext_resource type="PackedScene" uid="uid://yhgguw1vu7ub" path="res://change_lvl.tscn" id="7_kjvtc"]
+[ext_resource type="PackedScene" uid="uid://8sefd3h6un5t" path="res://entities/items/heart_container.tscn" id="8_ws042"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_plu4c"]
 
@@ -1142,5 +1143,8 @@ position = Vector2(-21, 112)
 stream = ExtResource("6_ogy2e")
 volume_db = -10.0
 autoplay = true
+
+[node name="heart_container" parent="." instance=ExtResource("8_ws042")]
+position = Vector2(-47, 33)
 
 [editable path="change_lvl"]
