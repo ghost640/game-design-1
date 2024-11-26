@@ -1107,9 +1107,6 @@ next_level = "td_world_1"
 [node name="Sprite2D" parent="change_lvl" index="1"]
 visible = false
 
-[node name="td_player" parent="." instance=ExtResource("3_qqsyp")]
-position = Vector2(-207, 944)
-
 [node name="td_enemy" parent="." instance=ExtResource("4_t2x7i")]
 position = Vector2(-477, 679)
 
@@ -1196,5 +1193,85 @@ position = Vector2(-267, 985)
 
 [node name="heart_container2" parent="." instance=ExtResource("5_hxavr")]
 position = Vector2(-343, 847)
+
+[node name="td_player" parent="." instance=ExtResource("3_qqsyp")]
+position = Vector2(-196, 865)
+
+[node name="heart_container3" parent="." instance=ExtResource("5_hxavr")]
+position = Vector2(-280, 788)
+
+[node name="heart_container4" parent="." instance=ExtResource("5_hxavr")]
+position = Vector2(-330, 956)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[node name="td_enemy28" parent="." instance=ExtResource("4_t2x7i")]
+position = Vector2(-693, 1017)
+
+[node name="td_enemy29" parent="." instance=ExtResource("4_t2x7i")]
+position = Vector2(393, 1044)
+
+[node name="td_enemy30" parent="." instance=ExtResource("4_t2x7i")]
+position = Vector2(-747, 714)
+
+[node name="td_enemy31" parent="." instance=ExtResource("4_t2x7i")]
+position = Vector2(-754, 435)
+
+[node name="td_enemy32" parent="." instance=ExtResource("4_t2x7i")]
+position = Vector2(-929, 759)
+
+[node name="td_enemy33" parent="." instance=ExtResource("4_t2x7i")]
+position = Vector2(-572, 459)
+
+[node name="td_enemy34" parent="." instance=ExtResource("4_t2x7i")]
+position = Vector2(-708, 114)
+
+[node name="td_enemy35" parent="." instance=ExtResource("4_t2x7i")]
+position = Vector2(-781, 861)
+
+[node name="td_enemy36" parent="." instance=ExtResource("4_t2x7i")]
+position = Vector2(406, 386)
+
+[node name="td_enemy37" parent="." instance=ExtResource("4_t2x7i")]
+position = Vector2(44, 408)
+
+[node name="td_enemy38" parent="." instance=ExtResource("4_t2x7i")]
+position = Vector2(163, 912)
+
+[node name="td_enemy39" parent="." instance=ExtResource("4_t2x7i")]
+position = Vector2(757, 397)
+
+[node name="td_enemy40" parent="." instance=ExtResource("4_t2x7i")]
+position = Vector2(735, 52)
+
+[node name="td_enemy41" parent="." instance=ExtResource("4_t2x7i")]
+position = Vector2(299, -5)
+
+[node name="td_enemy42" parent="." instance=ExtResource("4_t2x7i")]
+position = Vector2(678, 991)
+
+[node name="td_enemy43" parent="." instance=ExtResource("4_t2x7i")]
+position = Vector2(514, 663)
+
+[node name="td_enemy44" parent="." instance=ExtResource("4_t2x7i")]
+position = Vector2(293, 872)
+
+[node name="td_enemy45" parent="." instance=ExtResource("4_t2x7i")]
+position = Vector2(129, 663)
+
+[node name="td_enemy46" parent="." instance=ExtResource("4_t2x7i")]
+position = Vector2(-340, 176)
+
+[node name="td_enemy47" parent="." instance=ExtResource("4_t2x7i")]
+position = Vector2(-369, 369)
+
+[node name="td_enemy48" parent="." instance=ExtResource("4_t2x7i")]
+position = Vector2(-1047, 340)
+
+[node name="td_enemy49" parent="." instance=ExtResource("4_t2x7i")]
+position = Vector2(-233, 561)
+
+[node name="td_enemy50" parent="." instance=ExtResource("4_t2x7i")]
+position = Vector2(423, 57)
 
 [editable path="change_lvl"]

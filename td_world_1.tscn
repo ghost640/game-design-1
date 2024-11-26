@@ -1147,4 +1147,7 @@ autoplay = true
 [node name="heart_container" parent="." instance=ExtResource("8_ws042")]
 position = Vector2(-47, 33)
 
+[node name="heart_container2" parent="." instance=ExtResource("8_ws042")]
+position = Vector2(-14, 149)
+
 [editable path="change_lvl"]
