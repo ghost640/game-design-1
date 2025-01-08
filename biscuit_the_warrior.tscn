@@ -1,0 +1,74 @@
+[gd_scene load_steps=10 format=3 uid="uid://dvf57l7pba6oj"]
+
+[ext_resource type="Script" path="res://biscuit_the_warrior.gd" id="1_m00et"]
+[ext_resource type="Texture2D" uid="uid://bwy5vdm0m2cp0" path="res://assets/sprites/final world set/d46k8v2-78166733-6b7d-4646-9e82-c8481042bb0f.png" id="2_vcjy3"]
+[ext_resource type="PackedScene" uid="uid://bh0rrvoc4jfsh" path="res://pause_menu.tscn" id="3_yjm05"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_c3ba6"]
+radius = 24.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v7pow"]
+atlas = ExtResource("2_vcjy3")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2kiy1"]
+atlas = ExtResource("2_vcjy3")
+region = Rect2(352, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_78p42"]
+atlas = ExtResource("2_vcjy3")
+region = Rect2(288, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_44d1q"]
+atlas = ExtResource("2_vcjy3")
+region = Rect2(320, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u5t2e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v7pow")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2kiy1")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_78p42")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_44d1q")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[node name="biscuit_the_warrior" type="CharacterBody2D"]
+script = ExtResource("1_m00et")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_c3ba6")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_u5t2e")
+animation = &"idle"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(3, 3)
+
+[node name="pause_menu" parent="Camera2D" instance=ExtResource("3_yjm05")]
+visible = false
+offset_left = 2751.38
+offset_top = 130.611
+offset_right = 2751.38
+offset_bottom = 130.611

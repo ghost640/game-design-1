@@ -78,4 +78,5 @@ visible = false
 position = Vector2(1, 1)
 scale = Vector2(0.8125, 0.4375)
 sprite_frames = SubResource("SpriteFrames_r3534")
-animation = &"jump"
+animation = &"walk"
+frame_progress = 0.89201
