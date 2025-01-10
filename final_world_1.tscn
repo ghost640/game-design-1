@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=4 uid="uid://tsp10bo116oy"]
+[gd_scene load_steps=6 format=4 uid="uid://tsp10bo116oy"]
 
 [ext_resource type="Texture2D" uid="uid://bdjrtkpvfc3j5" path="res://assets/sprites/final world set/NES Platformer (2).png" id="1_ocuik"]
 [ext_resource type="PackedScene" uid="uid://dvf57l7pba6oj" path="res://biscuit_the_warrior.tscn" id="2_f2pn4"]
+[ext_resource type="PackedScene" uid="uid://bsqlawk6dc0c2" path="res://mice_warriors.tscn" id="3_g7xb5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s633v"]
 texture = ExtResource("1_ocuik")
@@ -70,3 +71,6 @@ tile_set = SubResource("TileSet_dtr2i")
 
 [node name="biscuit_the_warrior" parent="." instance=ExtResource("2_f2pn4")]
 position = Vector2(41, -24)
+
+[node name="mice-warriors" parent="." instance=ExtResource("3_g7xb5")]
+position = Vector2(193, -30)

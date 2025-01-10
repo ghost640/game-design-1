@@ -62,7 +62,6 @@ position = Vector2(6, -1)
 scale = Vector2(1.375, 1.375)
 sprite_frames = SubResource("SpriteFrames_nu0t4")
 animation = &"walking"
-frame_progress = 0.0268317
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(3, 3)

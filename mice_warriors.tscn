@@ -1,0 +1,54 @@
+[gd_scene load_steps=8 format=3 uid="uid://bsqlawk6dc0c2"]
+
+[ext_resource type="Script" path="res://mice_warriors.gd" id="1_5tlw3"]
+[ext_resource type="Texture2D" uid="uid://foiff8hv0yry" path="res://assets/sprites/final world set/lpccatratdog.png" id="2_wekly"]
+
+[sub_resource type="SeparationRayShape2D" id="SeparationRayShape2D_4acm8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xtrtm"]
+atlas = ExtResource("2_wekly")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xtobo"]
+atlas = ExtResource("2_wekly")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iv3e6"]
+atlas = ExtResource("2_wekly")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xu02j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xtrtm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xtobo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iv3e6")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 5.0
+}]
+
+[node name="mice-warriors" type="RigidBody2D"]
+script = ExtResource("1_5tlw3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("SeparationRayShape2D_4acm8")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(2, 5.5)
+scale = Vector2(1.02353, 0.946078)
+sprite_frames = SubResource("SpriteFrames_xu02j")
+animation = &"walking"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
