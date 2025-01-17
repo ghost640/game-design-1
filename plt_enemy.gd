@@ -13,7 +13,7 @@ func _on_timer_timeout() -> void:
 	direction *= -1
 
 func _on_body_entered(body: Node) -> void:
-	if body.name == "plt_player":
+	if body.name == "biscuit_the_warrior":
 		body.queue_free()
 		OS.alert("you died!")
 		get_tree().reload_current_scene()

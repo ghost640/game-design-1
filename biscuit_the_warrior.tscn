@@ -4,8 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://bwy5vdm0m2cp0" path="res://assets/sprites/final world set/d46k8v2-78166733-6b7d-4646-9e82-c8481042bb0f.png" id="2_vcjy3"]
 [ext_resource type="PackedScene" uid="uid://bh0rrvoc4jfsh" path="res://pause_menu.tscn" id="3_yjm05"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_c3ba6"]
-radius = 24.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i4ff3"]
+radius = 12.5
+height = 31.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v7pow"]
 atlas = ExtResource("2_vcjy3")
@@ -57,13 +58,17 @@ animations = [{
 script = ExtResource("1_m00et")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_c3ba6")
+position = Vector2(9.5, 5.5)
+shape = SubResource("CapsuleShape2D_i4ff3")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(10, 6)
+scale = Vector2(0.625, 0.6875)
 sprite_frames = SubResource("SpriteFrames_u5t2e")
 animation = &"idle"
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(10, -10)
 zoom = Vector2(3, 3)
 
 [node name="pause_menu" parent="Camera2D" instance=ExtResource("3_yjm05")]

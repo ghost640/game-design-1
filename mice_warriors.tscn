@@ -1,33 +1,39 @@
-[gd_scene load_steps=8 format=3 uid="uid://bsqlawk6dc0c2"]
+[gd_scene load_steps=9 format=3 uid="uid://bsqlawk6dc0c2"]
 
 [ext_resource type="Script" path="res://mice_warriors.gd" id="1_5tlw3"]
+[ext_resource type="Texture2D" uid="uid://dek85b7kqrngj" path="res://icon.svg" id="2_sali8"]
 [ext_resource type="Texture2D" uid="uid://foiff8hv0yry" path="res://assets/sprites/final world set/lpccatratdog.png" id="2_wekly"]
 
-[sub_resource type="SeparationRayShape2D" id="SeparationRayShape2D_4acm8"]
+[sub_resource type="SeparationRayShape2D" id="SeparationRayShape2D_kcljs"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xtrtm"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_3x62k"]
 atlas = ExtResource("2_wekly")
-region = Rect2(64, 32, 32, 32)
+region = Rect2(64, 36, 32, 36)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xtobo"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_omoq6"]
 atlas = ExtResource("2_wekly")
-region = Rect2(32, 32, 32, 32)
+region = Rect2(32, 36, 32, 36)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_iv3e6"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_nfdtf"]
 atlas = ExtResource("2_wekly")
-region = Rect2(0, 32, 32, 32)
+region = Rect2(0, 36, 32, 36)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_xu02j"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_3hdig"]
 animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_xtrtm")
+"texture": SubResource("AtlasTexture_3x62k")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_xtobo")
+"texture": SubResource("AtlasTexture_omoq6")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_iv3e6")
+"texture": SubResource("AtlasTexture_nfdtf")
 }],
 "loop": true,
 "name": &"walking",
@@ -38,17 +44,25 @@ animations = [{
 script = ExtResource("1_5tlw3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("SeparationRayShape2D_4acm8")
+shape = SubResource("SeparationRayShape2D_kcljs")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(0.729412, 0, 0.0392157, 1)
+position = Vector2(2.38419e-07, 3.57628e-07)
+scale = Vector2(0.15625, 0.171875)
+texture = ExtResource("2_sali8")
 
 [node name="Timer" type="Timer" parent="."]
-autostart = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(2, 5.5)
-scale = Vector2(1.02353, 0.946078)
-sprite_frames = SubResource("SpriteFrames_xu02j")
+position = Vector2(6, -1)
+scale = Vector2(1.375, 1.375)
+sprite_frames = SubResource("SpriteFrames_3hdig")
 animation = &"walking"
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(3, 3)
 
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
